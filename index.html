@@ -68,7 +68,13 @@
       border: 2px solid #343853;
       background: #11131d;
       touch-action: none;
+
+      /* 這兩行是重點：在手機上自動縮放，不會被裁掉 */
+      width: min(400px, calc(100vw - 40px)); /* 最多 400px，手機就縮到螢幕寬度內 */
+      height: auto;
+      display: block;
     }
+
 
     #btnStart {
       margin-top: 4px;
